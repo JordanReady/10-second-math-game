@@ -19,22 +19,23 @@ $(document).ready(function() {
     currentQuestion = questionGenerator();
     $('#equation').text(currentQuestion.equation);
 
-    $('#user-input').on('keyup', function () {
-        console.log($(this).val());
-    });
-
     var checkAnswer = function (userInput, answer) {
-        console.log(userInput === answer);
+        if (userInput === answer) {
+            renderNewQuestion();
+            $('#user-input').val('');
+        }
+    }
+
+    var renderNewQuestion = function () {
+        currentQuestion = questionGenerator();
+        $('#equation').text(currentQuestion.equation);
     }
 
     $('#user-input').on('keyup', function () {
         checkAnswer(Number($(this).val()), currentQuestion.answer);
     });
 
-
-
-
-
+    renderNewQuestion();
 
 
 
