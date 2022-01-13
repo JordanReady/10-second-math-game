@@ -22,4 +22,20 @@ $(document).ready(function() {
     $('#user-input').on('keyup', function () {
         console.log($(this).val());
     });
+
+    var checkAnswer = function (userInput, answer) {
+        console.log(userInput === answer);
+    }
+
+    $('#user-input').on('keyup', function () {
+        checkAnswer(Number($(this).val()), currentQuestion.answer);
+    });
+
+
+
+
+
+
+
+
 });
