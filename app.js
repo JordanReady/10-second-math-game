@@ -1,10 +1,14 @@
 $(document).ready(function() {
+//global variables
     var currentQuestion;
+    var timeLeft = 10;
 
+//random number generator
     var randomNumberGenerator = function (size) {
         return Math.ceil(Math.random() * size);
     }
-    
+
+//question generator
     var questionGenerator = function () {
         var question = {};
         var num1 = randomNumberGenerator(10);
@@ -19,6 +23,7 @@ $(document).ready(function() {
     currentQuestion = questionGenerator();
     $('#equation').text(currentQuestion.equation);
 
+//checking and updating question
     var checkAnswer = function (userInput, answer) {
         if (userInput === answer) {
             renderNewQuestion();
@@ -34,6 +39,16 @@ $(document).ready(function() {
     $('#user-input').on('keyup', function () {
         checkAnswer(Number($(this).val()), currentQuestion.answer);
     });
+
+//Timer countdown
+    var interval = setInterval(function () {
+        timeLeft--;
+        $('#time-left').text(timeLeft);
+        if (timeLeft === 0) {
+            clearInterval(interval);
+        }
+    }, 1000);
+
 
     renderNewQuestion();
 
