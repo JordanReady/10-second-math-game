@@ -92,5 +92,6 @@ body {
 }
 
 .title {
+    padding-top: 40px;
     font-weight: bold;
 }
