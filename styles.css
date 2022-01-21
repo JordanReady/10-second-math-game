@@ -3,8 +3,14 @@ h1 {
 }
 
 body {
-    background-color: black;
+    background-image: url(assets/annie-spratt-0ZPSX_mQ3xI-unsplash.jpg);
+    background-size: cover;
     text-align: center;
+}
+
+#equation {
+    color: black;
+    font-weight: bolder;
 }
 
 .easy {
@@ -81,7 +87,7 @@ body {
     padding-bottom: 20px;
     width: 235px;
     text-align: center;
-    border: white solid 1px;
+    border: black solid 2px;
     border-radius: 5px;
 }
 
