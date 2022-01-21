@@ -1,3 +1,77 @@
 h1 {
     color: white;
 }
+
+body {
+    background-color: black;
+    text-align: center;
+}
+
+.easy {
+    color: rgb(1, 109, 1);
+}
+
+.med {
+    color: rgb(4, 4, 190);
+}
+
+.hard {
+    color: rgb(104, 7, 7);
+}
+
+.number{
+    color: black;
+    background-color: white;
+    padding: 3px;
+}
+
+.green-span{
+    color: rgb(1, 109, 1);
+    font-weight: bolder;
+}
+
+.blue-span{
+    color: rgb(4, 4, 190);
+    font-weight: bolder;
+}
+
+.red-span{
+    color: rgb(104, 7, 7);
+    font-weight: bolder;
+}
+
+.green-span-long{
+    color: #5cb85c;
+}
+
+.blue-span-long{
+    color: #337ab7;
+}
+
+.red-span-long{
+    color: #d9534f;
+}
+
+.green-span-num{
+    background-color: #5cb85c;
+    color: white;
+    padding: 3px;
+}
+.blue-span-num{
+    background-color: #337ab7;
+    color: white;
+    padding: 3px;
+}
+
+.play-area {
+    margin: auto;
+    padding-bottom: 20px;
+    width: 235px;
+    text-align: center;
+    border: white solid 1px;
+    border-radius: 5px;
+}
+
+.title {
+    font-weight: bold;
+}

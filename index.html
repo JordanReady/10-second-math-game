@@ -14,11 +14,22 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1>Ten Second Math Game</h1>
-                <h1 id="equation"></h1>
-                <input id="user-input" type="number">
-                <h1>Seconds Remaining: <span id="time-left">10</span></h1>
-                <h1>Score: <span id="score"></span></h1>
+                <h1 class="title"> <span class="green-span">T</span><span class="green-span-long">en</span><span class="blue-span"> S</span><span class="blue-span-long">econd</span> <span class="red-span">M</span><span class="red-span-long">ath</span> <span class="green-span">G</span><span class="green-span-long">ame</span></h1>
+                <div class="play-area">
+                    <h1 id="equation"></h1>
+                    <input id="user-input" type="number">
+                </div>
+                <h1> <span class="blue-span">S</span><span class="blue-span-long">econds</span> <span class="red-span">R</span><span class="red-span-long">emaining</span> <span class="green-span-long"> : </span> <span class="green-span-num" id="time-left">10</span></h1>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1> <span class="green-span">S</span><span class="green-span-long">core</span> <span class="blue-span-long"> : </span><span class = "blue-span-num" id="score">0</span></h1>
+                        <h1><span class="red-span">D</span><span class="red-span-long">ifficulty</span></h1>
+                        <button class="btn btn-success easy">Easy</button>
+                        <button class="btn btn-primary med">Medium</button>
+                        <button class="btn btn-danger hard">Hard</button>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>

@@ -33,10 +33,24 @@ $(document).ready(function() {
     };
 
 //question generator
+    $('.easy').on('click', function () {
+        range = 10;
+        renderNewQuestion();
+    });
+    $('.med').on('click', function () {
+        range = 25;
+        renderNewQuestion();
+    });
+    $('.hard').on('click', function () {
+        range = 50;
+        renderNewQuestion();
+    });
+
+    var range = 10;
     var questionGenerator = function () {
         var question = {};
-        var num1 = randomNumberGenerator(10);
-        var num2 = randomNumberGenerator(10);
+        var num1 = randomNumberGenerator(range);
+        var num2 = randomNumberGenerator(range);
     
         question.answer = num1 + num2;
         question.equation = String(num1) + " + " + String(num2);
