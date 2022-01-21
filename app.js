@@ -45,14 +45,17 @@ $(document).ready(function() {
     $('.easy').on('click', function () {
         range = 10;
         renderNewQuestion();
+        $('#high-score').text(0);
     });
     $('.med').on('click', function () {
         range = 25;
         renderNewQuestion();
+        $('#high-score').text(0);
     });
     $('.hard').on('click', function () {
         range = 50;
         renderNewQuestion();
+        $('#high-score').text(0);
     });
 
     var range = 10;
