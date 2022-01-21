@@ -10,6 +10,15 @@ $(document).ready(function() {
         $('#score').text(score);
     };
 
+    var highScore = 0;
+    var updateHighScore = function (amount) {
+        if (highScore < score) {
+            highScore = score;
+            $('#high-score').text(highScore);
+        }
+    }
+
+
 //start game
     var startGame = function () {
         if(!interval) {
@@ -69,6 +78,8 @@ $(document).ready(function() {
             updateTimeLeft(+1);
             updateScore(+1);
         }
+        updateHighScore();
+
     };
 
     var renderNewQuestion = function () {
