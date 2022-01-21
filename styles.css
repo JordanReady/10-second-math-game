@@ -9,14 +9,18 @@ body {
 
 .easy {
     color: rgb(1, 109, 1);
+    font-weight: bolder;
 }
 
 .med {
     color: rgb(4, 4, 190);
+    font-weight: bolder;
 }
 
 .hard {
     color: rgb(104, 7, 7);
+    font-weight: bolder;
+
 }
 
 .number{
