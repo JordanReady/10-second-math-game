@@ -25,46 +25,53 @@ body {
 
 }
 
-.number{
+.number {
     color: black;
     background-color: white;
     padding: 3px;
 }
 
-.green-span{
+.green-span {
     color: rgb(1, 109, 1);
     font-weight: bolder;
 }
 
-.blue-span{
+.blue-span {
     color: rgb(4, 4, 190);
     font-weight: bolder;
 }
 
-.red-span{
+.red-span {
     color: rgb(104, 7, 7);
     font-weight: bolder;
 }
 
-.green-span-long{
+.green-span-long {
     color: #5cb85c;
 }
 
-.blue-span-long{
+.blue-span-long {
     color: #337ab7;
 }
 
-.red-span-long{
+.red-span-long {
     color: #d9534f;
 }
 
-.green-span-num{
+.green-span-num {
     background-color: #5cb85c;
     color: white;
     padding: 3px;
 }
-.blue-span-num{
+
+.blue-span-num {
     background-color: #337ab7;
+    color: white;
+    padding: 3px;
+}
+
+.red-span-num {
+    background-color: #d9534f;
     color: white;
     padding: 3px;
 }
