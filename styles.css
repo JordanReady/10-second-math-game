@@ -15,11 +15,13 @@ body {
 .med {
     color: rgb(4, 4, 190);
     font-weight: bolder;
+    margin-left: 8px;
 }
 
 .hard {
     color: rgb(104, 7, 7);
     font-weight: bolder;
+    margin-left: 8px;
 
 }
 
