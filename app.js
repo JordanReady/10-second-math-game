@@ -4,17 +4,21 @@ $(document).ready(function() {
     var timeLeft = 10;
     var interval;
     var score = 0;
+    var highScore = 0;
 
     var updateScore = function (amount) {
         score += amount;
         $('#score').text(score);
     };
 
-    var highScore = 0;
     var updateHighScore = function (amount) {
+        highScore += amount;
         if (highScore < score) {
             highScore = score;
             $('#high-score').text(highScore);
+        }
+        if ($('#high-score').text() == 0) {
+            highScore = 0;
         }
     }
 
@@ -41,22 +45,32 @@ $(document).ready(function() {
         return Math.ceil(Math.random() * size);
     };
 
-//question generator
+// difficulty buttons
+
     $('.easy').on('click', function () {
         range = 10;
         renderNewQuestion();
         $('#high-score').text(0);
+        if (timeLeft != 10 && timeLeft != 0) {
+            updateTimeLeft(-timeLeft + 1); 
+        }
     });
     $('.med').on('click', function () {
         range = 25;
         renderNewQuestion();
         $('#high-score').text(0);
-    });
+        updateHighScore();
+        if (timeLeft != 10 && timeLeft != 0) {
+            updateTimeLeft(-timeLeft + 1); 
+        }    });
     $('.hard').on('click', function () {
         range = 50;
         renderNewQuestion();
         $('#high-score').text(0);
-    });
+        if (timeLeft != 10 && timeLeft != 0) {
+            updateTimeLeft(-timeLeft + 1); 
+        }    });
+//question generator
 
     var range = 10;
     var questionGenerator = function () {
@@ -81,7 +95,7 @@ $(document).ready(function() {
             updateTimeLeft(+1);
             updateScore(+1);
         }
-        updateHighScore();
+        updateHighScore(0);
 
     };
 
